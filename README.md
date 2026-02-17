@@ -58,15 +58,11 @@ ProjetoFinalAED/
 ├── main.py               # Ponto de entrada — loop principal e autenticação
 ├── classAluno.py         # Classe Aluno com validação e menu
 ├── classProfessor.py     # Classe Professor com menus e exportação
-├── algoritmos.py         # Bubble Sort + Árvore Binária de Busca (BST)
+├── algoritmos.py         # Bubble Sort + Árvore Binária de Busca
 ├── leitorDados.py        # Leitura e escrita do ficheiro JSON
 ├── testeStress.py        # Gerador de dados e comparação de algoritmos
 ├── database.json         # Base de dados local (alunos e professores)
 │
-└── docs/                 # Documentação do projeto
-    ├── Documentacao_Diagramas_UML.docx
-    ├── RegrasCriterios.docx
-    └── FluxoAtividades_Aluno.docx
 ```
 
 ---
@@ -80,7 +76,7 @@ ProjetoFinalAED/
 | `csv` | Exportação de relatórios |
 | `time` | Cronómetro da aula |
 | `random` | Geração de dados para stress test |
-| `fpdf2` *(opcional)* | Exportação de relatórios PDF |
+| `fpdf2` *(necessário para exportação)* | Exportação de relatórios PDF |
 
 ---
 
@@ -99,10 +95,10 @@ pip install fpdf2
 
 ```bash
 # Clonar o repositório
-git clone https://github.com/teu-utilizador/nome-do-repo.git
+git clone https://github.com/joaofigueiradev/projeto-final-aed-fds-sistema-de-gest-o-de-Alunos---ISTEC.git
 
 # Entrar na pasta do projeto
-cd nome-do-repo/ProjetoFinalAED
+cd projeto-final-aed-fds-sistema-de-gest-o-de-Alunos---ISTEC.git/ProjetoFinalAED
 
 # Correr o programa
 python main.py
@@ -193,17 +189,18 @@ A pasta `docs/` contém a documentação técnica completa do projeto:
 
 | Documento | Conteúdo |
 |---|---|
-| `Documentacao_Diagramas_UML.docx` | Diagrama de Casos de Uso, Classes, DFD e Atividades |
-| `RegrasCriterios.docx` | 29 Regras de Negócio + 30 Critérios de Aceitação |
-| `FluxoAtividades_Aluno.docx` | Fluxo de atividades detalhado do ator Aluno |
+| `[DOCUMENTAÇÃO] Diagramas do Sistema | Sistema de Gestão de Aulas - ISTEC.pdf` | Diagrama de Casos de Uso, Classes, Fluxo e de Atividades |
+| `[DOCUMENTAÇÃO] Especificação - Sistema de Gestão de Sistemas - ISTEC.pdf |  | Ficha Técnica do Sistema: Sistema de Gestão de Projetos - ISTEC
+| `[DOCUMENTAÇÃO] Regras de Negócio & Critérios de Aceitação | Sistema de Gestão de Aulas - ISTEC.pdf` | Regras de Negócio + Critérios de Aceitação |
 
 ---
 
 ## 👤 Autores
 
-**[O teu nome]**
-- GitHub: [@teu-utilizador](https://github.com/teu-utilizador)
+**[João Pedro Marques Figueira]**
+- GitHub: [@JoaoFigueiraDev]([https://github.com/JoaoFigueiraDev]))
+
 
 ---
 
-*Projeto académico desenvolvido para a unidade curricular de Algoritmos e Estruturas de Dados.*
+*Projeto académico desenvolvido para as unidades curriculares de Algoritmos e Estruturas de Dados e Fundamentos de Software.*
