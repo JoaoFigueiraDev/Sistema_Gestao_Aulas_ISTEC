@@ -95,7 +95,7 @@ pip install fpdf2
 
 ```bash
 # Clonar o repositório
-git clone https://github.com/joaofigueiradev/projeto-final-aed-fds-sistema-de-gest-o-de-Alunos---ISTEC.git
+git clone https://github.com/joaofigueiradev/Sistema_Gestao_Aulas_ISTEC
 
 # Entrar na pasta do projeto
 cd projeto-final-aed-fds-sistema-de-gest-o-de-Alunos---ISTEC.git/ProjetoFinalAED
