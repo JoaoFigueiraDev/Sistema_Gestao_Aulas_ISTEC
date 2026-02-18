@@ -1,0 +1,74 @@
+import leitorDados
+import os
+# --- ESTADO GLOBAL DA AULA ---
+estado_aula = {
+    'aberta': False,
+    'inicio': 0.0,
+    'presencas': []  # Lista de tuplos (numero, nome)
+}
+
+# --- FUNÇÃO DE AUTENTICAÇÃO ---
+def autenticar_utilizador(tipo, db_alunos, db_profs):
+    
+    try:
+        id_input = int(input(f"Digite o ID/Número de {tipo}: "))
+        senha_input = input("Digite a Senha: ")
+        os.system("cls")
+    except ValueError:
+        print("❌ Erro: O ID/Número deve ser numérico.")
+        return None
+
+    if tipo == "Aluno":
+        for aluno in db_alunos:
+            if aluno.numero == id_input and aluno.password == senha_input:
+                return aluno
+
+    elif tipo == "Professor":
+        for prof in db_profs:
+            if prof.id == id_input and prof.senha == senha_input:
+                return prof
+
+    print("❌ Credenciais Inválidas!")
+    return None
+
+
+# --- LOOP PRINCIPAL ---
+def main():
+    lista_alunos, lista_profs = leitorDados.carregar_dados()
+
+    if not lista_alunos and not lista_profs:
+        os.system("cls")
+        print("❌ Não foi possível carregar dados. Verifica o ficheiro database.json.")
+        return
+    os.system("cls")
+    print("✅ Sistema iniciado com sucesso!")
+
+    while True:
+        print("\n=== SISTEMA DE GESTÃO DE AULAS ===")
+        print("1. Login Aluno")
+        print("2. Login Professor")
+        print("0. Sair")
+        opcao = input("Escolha: ").strip()
+        os.system("cls")
+
+        if opcao == "1":
+            aluno_logado = autenticar_utilizador("Aluno", lista_alunos, lista_profs)
+            if aluno_logado:
+                aluno_logado.menu_aluno(estado_aula)
+
+        elif opcao == "2":
+            prof_logado = autenticar_utilizador("Professor", lista_alunos, lista_profs)
+            if prof_logado:
+                prof_logado.menu_professor(estado_aula)
+
+        elif opcao == "0":
+            leitorDados.guardar_dados(lista_alunos, lista_profs)
+            print("💾 Dados guardados. A sair do sistema...")
+            break
+
+        else:
+            print("❌ Opção inválida. Escolhe 0, 1 ou 2.")
+
+
+if __name__ == "__main__":
+    main()
